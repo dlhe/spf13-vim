@@ -134,27 +134,27 @@ create_symlinks() {
 
     lnif "$endpath/.vimrc"              "$HOME/.vimrc"
     #lnif "$endpath/.vim"                "$HOME/.vim"
-    lnif "$endpath/.vimrc.bundles"      "$HOME/.vim/.vimrc.bundles"
-    lnif "$endpath/.vimrc.before"       "$HOME/.vim/.vimrc.before"
+    #lnif "$endpath/.vimrc.bundles"      "$HOME/.vim/.vimrc.bundles"
+    #lnif "$endpath/.vimrc.before"       "$HOME/.vim/.vimrc.before"
 
     # Useful for fork maintainers
     touch  "$HOME/.vim/.vimrc.local"
 
-    if [ -e "$endpath/.vimrc.fork" ]; then
-        ln -sf "$endpath/.vimrc.fork" "$HOME/.vim/.vimrc.fork"
-    elif [ "$fork_maintainer" -eq '1' ]; then
-        touch "$HOME/.vim/.vimrc.fork"
-        touch "$HOME/.vim/.vimrc.bundles.fork"
-        touch "$HOME/.vim/.vimrc.before.fork"
-    fi
+    #if [ -e "$endpath/.vimrc.fork" ]; then
+    #    ln -sf "$endpath/.vimrc.fork" "$HOME/.vim/.vimrc.fork"
+    #elif [ "$fork_maintainer" -eq '1' ]; then
+    #    touch "$HOME/.vim/.vimrc.fork"
+    #    touch "$HOME/.vim/.vimrc.bundles.fork"
+    #    touch "$HOME/.vim/.vimrc.before.fork"
+    #fi
 
-    if [ -e "$endpath/.vimrc.bundles.fork" ]; then
-        ln -sf "$endpath/.vimrc.bundles.fork" "$HOME/.vim/.vimrc.bundles.fork"
-    fi
+    #if [ -e "$endpath/.vimrc.bundles.fork" ]; then
+    #    ln -sf "$endpath/.vimrc.bundles.fork" "$HOME/.vim/.vimrc.bundles.fork"
+    #fi
 
-    if [ -e "$endpath/.vimrc.before.fork" ]; then
-        ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vim/.vimrc.before.fork"
-    fi
+    #if [ -e "$endpath/.vimrc.before.fork" ]; then
+    #    ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vim/.vimrc.before.fork"
+    #fi
 
     ret="$?"
     success "$1"
