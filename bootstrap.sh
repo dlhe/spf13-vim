@@ -182,10 +182,10 @@ setup_vundle() {
 variable_set "$HOME"
 program_exists "vim" "To install $app_name you first need to install Vim."
 
-do_backup   "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d%S`" \
-        "$HOME/.vim" \
-        "$HOME/.vimrc" \
-        "$HOME/.gvimrc"
+#do_backup   "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d%S`" \
+#        "$HOME/.vim" \
+#        "$HOME/.vimrc" \
+#        "$HOME/.gvimrc"
 
 clone_repo      "Successfully cloned $app_name"
 
