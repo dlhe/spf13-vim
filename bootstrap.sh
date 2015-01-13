@@ -17,7 +17,7 @@
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
 app_dir="$HOME/.spf13-vim-3"
-[ -z "$git_uri" ] && git_uri='https://github.com/spf13/spf13-vim.git'
+[ -z "$git_uri" ] && git_uri='https://github.com/dlhe/spf13-vim.git'
 git_branch='3.0'
 debug_mode='0'
 fork_maintainer='0'
@@ -127,32 +127,33 @@ clone_vundle() {
 create_symlinks() {
     endpath="$app_dir"
 
+
     if [ ! -d "$endpath/.vim/bundle" ]; then
         mkdir -p "$endpath/.vim/bundle"
     fi
 
     lnif "$endpath/.vimrc"              "$HOME/.vimrc"
-    lnif "$endpath/.vimrc.bundles"      "$HOME/.vimrc.bundles"
-    lnif "$endpath/.vimrc.before"       "$HOME/.vimrc.before"
     lnif "$endpath/.vim"                "$HOME/.vim"
+    lnif "$endpath/.vimrc.bundles"      "$HOME/.vim/.vimrc.bundles"
+    lnif "$endpath/.vimrc.before"       "$HOME/.vim/.vimrc.before"
 
     # Useful for fork maintainers
-    touch  "$HOME/.vimrc.local"
+    touch  "$HOME/.vim/.vimrc.local"
 
     if [ -e "$endpath/.vimrc.fork" ]; then
-        ln -sf "$endpath/.vimrc.fork" "$HOME/.vimrc.fork"
+        ln -sf "$endpath/.vimrc.fork" "$HOME/.vim/.vimrc.fork"
     elif [ "$fork_maintainer" -eq '1' ]; then
-        touch "$HOME/.vimrc.fork"
-        touch "$HOME/.vimrc.bundles.fork"
-        touch "$HOME/.vimrc.before.fork"
+        touch "$HOME/.vim/.vimrc.fork"
+        touch "$HOME/.vim/.vimrc.bundles.fork"
+        touch "$HOME/.vim/.vimrc.before.fork"
     fi
 
     if [ -e "$endpath/.vimrc.bundles.fork" ]; then
-        ln -sf "$endpath/.vimrc.bundles.fork" "$HOME/.vimrc.bundles.fork"
+        ln -sf "$endpath/.vimrc.bundles.fork" "$HOME/.vim/.vimrc.bundles.fork"
     fi
 
     if [ -e "$endpath/.vimrc.before.fork" ]; then
-        ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vimrc.before.fork"
+        ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vim/.vimrc.before.fork"
     fi
 
     ret="$?"
