@@ -61,14 +61,14 @@
 " }
 
 " Use before config if available {
-    if filereadable(expand("~/.vimrc.before"))
-        source ~/.vimrc.before
+    if filereadable(expand("~/.vim/.vimrc.before"))
+        source ~/.vim/.vimrc.before
     endif
 " }
 
 " Use bundles config {
-    if filereadable(expand("~/.vimrc.bundles"))
-        source ~/.vimrc.bundles
+    if filereadable(expand("~/.vim/.vimrc.bundles"))
+        source ~/.vim/.vimrc.bundles
     endif
 " }
 
@@ -1135,21 +1135,21 @@
 " }
 
 " Use fork vimrc if available {
-    if filereadable(expand("~/.vimrc.fork"))
-        source ~/.vimrc.fork
+    if filereadable(expand("~/.vim/.vimrc.fork"))
+        source ~/.vim/.vimrc.fork
     endif
 " }
 
 " Use local vimrc if available {
-    if filereadable(expand("~/.vimrc.local"))
-        source ~/.vimrc.local
+    if filereadable(expand("~/.vim/.vimrc.local"))
+        source ~/.vim/.vimrc.local
     endif
 " }
 
 " Use local gvimrc if available and gui is running {
     if has('gui_running')
-        if filereadable(expand("~/.gvimrc.local"))
-            source ~/.gvimrc.local
+        if filereadable(expand("~/.vim/.gvimrc.local"))
+            source ~/.vim/.gvimrc.local
         endif
     endif
 " }

@@ -95,13 +95,13 @@
 " }
 
 " Use fork before if available {
-    if filereadable(expand("~/.vimrc.before.fork"))
-        source ~/.vimrc.before.fork
+    if filereadable(expand("~/.vim/.vimrc.before.fork"))
+        source ~/.vim/.vimrc.before.fork
     endif
 " }
 
 " Use local before if available {
-    if filereadable(expand("~/.vimrc.before.local"))
-        source ~/.vimrc.before.local
+    if filereadable(expand("~/.vim/.vimrc.before.local"))
+        source ~/.vim/.vimrc.before.local
     endif
 " }
