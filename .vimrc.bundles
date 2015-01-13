@@ -120,6 +120,7 @@
                 Bundle 'bling/vim-airline'
             endif
             Bundle 'bling/vim-bufferline'
+            Bundle 'troydm/easybuffer.vim'
             Bundle 'Lokaltog/vim-easymotion'
             Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'flazz/vim-colorschemes'

@@ -1,0 +1,6 @@
+"Cpp" {
+    if count(g:spf13_bundle_groups, 'cpp')
+        Bundle 'octol/vim-cpp-enhanced-highlight'
+    endif
+"}
+
