@@ -16,7 +16,7 @@
 
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
-app_dir="$HOME/.spf13-vim-3"
+app_dir="$HOME/.vim"
 [ -z "$git_uri" ] && git_uri='https://github.com/dlhe/spf13-vim.git'
 git_branch='3.0'
 debug_mode='0'
@@ -133,7 +133,7 @@ create_symlinks() {
     fi
 
     lnif "$endpath/.vimrc"              "$HOME/.vimrc"
-    lnif "$endpath/.vim"                "$HOME/.vim"
+    #lnif "$endpath/.vim"                "$HOME/.vim"
     lnif "$endpath/.vimrc.bundles"      "$HOME/.vim/.vimrc.bundles"
     lnif "$endpath/.vimrc.before"       "$HOME/.vim/.vimrc.before"
 
