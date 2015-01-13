@@ -305,3 +305,7 @@
         source ~/.vim/.vimrc.bundles.local
     endif
 " }
+
+"enable filetype {
+    filetype on
+"}
