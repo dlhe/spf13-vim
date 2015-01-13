@@ -1009,6 +1009,11 @@
             endif
         endif
     " }
+    " EasyBuffer {
+        if isdirectory(expand("~/.vim/bundle/easybuffer.vim"))
+            nmap <leader>b :EasyBuffer<CR>
+        endif
+    " }
 
 " }
 
